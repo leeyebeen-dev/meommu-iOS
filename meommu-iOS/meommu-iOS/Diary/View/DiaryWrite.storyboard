@@ -321,7 +321,9 @@
                         <outlet property="borderView5" destination="h7Y-su-c0F" id="mey-Jc-a5p"/>
                         <outlet property="dateLabel" destination="veU-rC-yMC" id="96F-Pt-YM8"/>
                         <outlet property="dateTextField" destination="AdS-fq-82y" id="mUf-gH-tCc"/>
+                        <outlet property="diaryContentTextField" destination="ERx-jz-qxc" id="ykx-vJ-QsN"/>
                         <outlet property="diaryGuideButton" destination="SYv-T2-0TZ" id="zev-wg-ZVc"/>
+                        <outlet property="diaryTitleTextField" destination="8ux-sH-DIZ" id="BLf-Ku-0eQ"/>
                         <outlet property="imagePickerButton" destination="QmJ-wo-bT9" id="7zs-jP-DKd"/>
                         <outlet property="imageView1" destination="COD-GK-Npr" id="Sbh-Hb-bSR"/>
                         <outlet property="imageView2" destination="XR0-YO-vU5" id="6ci-2g-cad"/>

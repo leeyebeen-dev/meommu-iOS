@@ -14,6 +14,8 @@ import FittedSheets
 
 class DiaryWriteViewController: UIViewController, PHPickerViewControllerDelegate {
     
+    var dogName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +33,9 @@ class DiaryWriteViewController: UIViewController, PHPickerViewControllerDelegate
         // 이미지 피커 버튼에 액션 추가
         imagePickerButton.addTarget(self, action: #selector(OnClick_imagePickerButton(_:)), for: .touchUpInside)
 
+        if let name = dogName {
+            diaryContentTextField.placeholder = name + "의 일기를 작성해주세요."
+        }
     }
     
     // -----------------------------------------
@@ -48,8 +53,6 @@ class DiaryWriteViewController: UIViewController, PHPickerViewControllerDelegate
         self.present(sheetController, animated: true, completion: nil)
         
     }
-
-    
 
     
     // -----------------------------------------
@@ -209,6 +212,14 @@ class DiaryWriteViewController: UIViewController, PHPickerViewControllerDelegate
         monthLabel.text = "\(current_month)월"
         dateLabel.text = "\(current_date)일"
     }
+    
+    
+    // -----------------------------------------
+    // 일기 내용 작성
+    @IBOutlet var diaryTitleTextField: UITextField!
+    
+    @IBOutlet var diaryContentTextField: UITextField!
+
     
     // -----------------------------------------
     // 뒤로가기 버튼

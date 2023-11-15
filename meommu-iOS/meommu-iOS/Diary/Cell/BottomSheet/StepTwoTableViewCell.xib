@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,11 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="산책을 오래 했어요" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6P-7y-MgV">
-                        <rect key="frame" x="20" y="12" width="310" height="25"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="310" id="3l2-5k-oKf"/>
-                            <constraint firstAttribute="height" constant="25" id="Yra-tg-E6l"/>
-                        </constraints>
+                        <rect key="frame" x="20.000000000000007" y="12" width="118.66666666666669" height="25"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                         <color key="textColor" red="0.54509806630000002" green="0.55686277149999996" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
@@ -30,7 +26,6 @@
                 </subviews>
                 <color key="backgroundColor" red="0.19215688110000001" green="0.2117646933" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="F6P-7y-MgV" secondAttribute="trailing" constant="20" symbolic="YES" id="1Wv-39-XLG"/>
                     <constraint firstItem="F6P-7y-MgV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="TP3-qg-h51"/>
                     <constraint firstAttribute="bottom" secondItem="F6P-7y-MgV" secondAttribute="bottom" constant="11" id="bMC-o8-eXs"/>
                     <constraint firstItem="F6P-7y-MgV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="xak-HZ-7DL"/>

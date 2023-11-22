@@ -10,6 +10,7 @@ import PhotosUI
 import MobileCoreServices
 import UniformTypeIdentifiers
 import FittedSheets
+import Alamofire
 
 
 class DiaryWriteViewController: UIViewController, PHPickerViewControllerDelegate {
@@ -223,6 +224,40 @@ class DiaryWriteViewController: UIViewController, PHPickerViewControllerDelegate
     
     @IBOutlet var diaryContentTextField: UITextField!
 
+    
+    // -----------------------------------------
+    // 일기 내용 작성 완료
+    
+    let AccessToken = "eyJhbGciOiJIUzUxMiJ9.eyJpZCI6MjcsImlhdCI6MTcwMDYxMzk1OSwiZXhwIjoxNzAxMjE4NzU5fQ.AlQlq-YsMavw3QXJGUEx1FdV-CYdw2YUvhKqohb8JBFztmpl2gjtLPTujXPXEIRMC4MZV901xwVZNT6BbTuNcQ"
+    
+    @IBOutlet var diaryWriteButton: UIBarButtonItem!
+    
+    @IBAction func OnClick_diaryWriteButton(_ sender: Any) {
+        
+        guard let title = diaryTitleTextField.text, let content = diaryContentTextField.text, let dogName = dogName else { return }
+        
+        let headers: HTTPHeaders = [
+                "Content-Type": "application/json",
+                "Authorization": "Bearer \(AccessToken)"
+            ]
+
+            let parameters: [String: Any] = [
+                "date": "\(yearLabel.text!.dropLast(1))-\(monthLabel.text!.dropLast(1))-\(dateLabel.text!.dropLast(1))",
+                "dogName": dogName,
+                "title": title,
+                "content": content,
+                "imageIds": selectedImages.map { _ in Int.random(in: 1...5) } // 이미지에 대한 id를 설정해주세요.
+            ]
+
+            AF.request("https://port-0-meommu-api-jvvy2blm5wku9j.sel5.cloudtype.app/api/v1/diaries",
+                       method: .post,
+                       parameters: parameters,
+                       encoding: JSONEncoding.default,
+                       headers: headers)
+                .response { response in
+                    debugPrint(response)
+            }
+    }
     
     // -----------------------------------------
     // 뒤로가기 버튼
